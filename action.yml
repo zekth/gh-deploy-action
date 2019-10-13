@@ -1,0 +1,23 @@
+name: "GitHub Branch Deploy"
+description: "Deploy anything to Github branches"
+author: "Vincent Le Goff <vince.legoff@gmail.com"
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+branding:
+  icon: 'cloud'  
+  color: 'blue'
+inputs:
+  build_dir:
+    description: 'Directory to deploy'
+    required: false
+  gh_token:
+    description: 'Personnal access token'
+    required: true
+  fqdn:
+    description: 'FQDN to deploy in CNAME file'
+    required: false
+  target_branch:
+    description: 'Branch targeted for the deployment'
+    required: false
+    default: 'gh-pages'

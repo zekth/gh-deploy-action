@@ -1,0 +1,14 @@
+name: build
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: GitHub Pages Deploy
+        if: github.ref == 'refs/heads/master'
+        uses: zekth/gh-deploy-action@1.0.0
+        with:
+          gh_token: ${{ secrets.GH_TOKEN }}
