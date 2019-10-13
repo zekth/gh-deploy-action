@@ -15,7 +15,7 @@ Env variables:
     if: github.ref == 'refs/heads/master'
     uses: zekth/gh-deploy-action@1.0.0
     with:
-        dir: dist/
+        dir: dist
         gh_token: ${{ secrets.GH_TOKEN }}
         fqdn: foo.bar.com
         target_branch: staging
