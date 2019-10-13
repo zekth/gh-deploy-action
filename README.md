@@ -1,4 +1,4 @@
-# gh-deploy
+# gh-deploy-action
 
 Completely inspired by https://github.com/maxheld83/ghpages
 
